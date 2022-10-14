@@ -1,0 +1,56 @@
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/html"><head>
+    <meta charset="UTF-8" name="description" content="吟唱词汇创建器">
+    <title>吟唱词汇创建器</title>
+    <style type="text/css">
+        th, td {
+            border: solid 1px #6D6D6D;
+            padding: 5px 10px;
+        }
+        .mt-sm {margin-top: 8px;}
+        body {
+            background: #f4f4f4;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 1024px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+    </style>
+
+    <script type="text/javascript" src="libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/xslx/0.18.5/xlsx.core.min.js"></script>
+
+    <link rel="stylesheet" href="libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="libs/nwg-utils/copyUtils.js"></script>
+</head>
+<body style="">
+<div class="container">
+    <h1>吟唱词汇创建器</h1>
+    <h2>生成结果</h2>
+    <label>
+        <textarea id="generateText"></textarea>
+        <button id="copyButton" onclick="copyWord()">复制</button>
+        <button onclick="clearWord()">清空</button>
+    </label>
+    <h2>读取excel</h2>
+    <div class="mt-sm">
+        <input type="file" id="file" style="display:none;" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+        <a href="javascript:selectFile()">加载本地excel文件</a> <a href="./sample/word.xlsx"download="word.xlsx">样例下载</a>
+        <br/>
+        <a href="javascript:loadRemoteFile('./sample/word.xlsx')">加载预置的excel文件(./sample/word.xlsx)</a>
+    </div>
+    <br/>
+    <p>读取结果：</p>
+    <div id="result">
+        需要先加载Excel内容
+    </div>
+</div>
+
+
+</body></html>
