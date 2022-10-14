@@ -7,4 +7,4 @@ https://kawav.github.io/novelai-word-generator/
 
 感谢：
 - sheetjs
-- 热心不知名提供文档的网友
+- 感谢由 shuix (https://t.me/StableDiffusion_CN/44334) 大佬提供的部分中英文 Tag 对照表
